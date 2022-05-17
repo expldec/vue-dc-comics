@@ -86,8 +86,5 @@ export default {
       background-repeat: no-repeat;
     }
   }
-  &__img {
-    width: 70%;
-  }
 }
 </style>
