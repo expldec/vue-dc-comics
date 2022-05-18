@@ -3,9 +3,7 @@
     <AppHeader />
     <main>
       <div class="banner"></div>
-      <div class="comic-list">
-        <div class="section-tag">Current Series</div>
-      </div>
+      <ProductList :comicList="comics" />
     </main>
     <AppFooter />
   </div>
@@ -14,12 +12,14 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
 import AppFooter from "./components/AppFooter.vue";
+import ProductList from "./components/ProductList.vue";
 
 export default {
   name: "App",
   components: {
     AppHeader,
     AppFooter,
+    ProductList,
   },
   data: function () {
     return {
@@ -123,21 +123,6 @@ main {
     min-height: 350px;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  .comic-list {
-    background-color: $main-bg-grey;
-    height: 200px;
-    position: relative;
-  }
-  .section-tag {
-    background-color: $brand-primary-color;
-    display: inline-block;
-    padding: 0.5rem;
-    color: white;
-    text-transform: uppercase;
-    position: absolute;
-    top: -1rem;
-    left: 1rem;
   }
 }
 </style>
