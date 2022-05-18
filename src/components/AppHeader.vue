@@ -82,6 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/common.scss";
 @import "../style/variables.scss";
 .header {
   height: $header-height;
@@ -102,7 +103,7 @@ export default {
   &__menu {
     display: flex;
     li {
-      line-height: $header-height;
+      line-height: calc($header-height - 5px);
       padding: 0 0.5rem;
       &.active {
         border-bottom: 5px solid $brand-primary-color;
